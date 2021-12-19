@@ -2,18 +2,22 @@ name: Test If Build
 on:
   push:
     paths:
-      - 'src/**'
+      - "src/**"
   pull_request:
     paths:
-      - 'src/**'
+      - "src/**"
 
 jobs:
-  test-ui-build:
+  test-popup-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build ui
-        run: make build-ui
+      - name: Build Popup
+        run: make build-popup
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build Options
+        run: make build-options
 
   test-extension-build:
     runs-on: ubuntu-latest
