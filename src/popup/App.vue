@@ -1,15 +1,20 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <Home />
   </div>
-  <router-view />
 </template>
-
+<script lang="ts">
+import Home from '@/popup/views/Home.vue';
+export default {
+  components: {
+    Home,
+  },
+};
+</script>
 <style lang="scss">
 #app {
   min-width: 50em;
-  height: 100%;
+  min-height: 50em;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

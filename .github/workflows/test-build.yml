@@ -1,0 +1,23 @@
+name: Test If Build
+on:
+  push:
+    paths:
+      - 'src/**'
+  pull_request:
+    paths:
+      - 'src/**'
+
+jobs:
+  test-popup-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build popup
+        run: make build-popup
+
+  test-extension-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build extension
+        run: make build-ext

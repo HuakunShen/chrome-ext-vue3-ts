@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <button v-on:click="sendMsg">Send Test Message to Content Script</button>
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
   </div>
 </template>
@@ -9,13 +9,17 @@
 import { defineComponent } from 'vue';
 import HelloWorld from '@/popup/components/HelloWorld.vue'; // @ is an alias to /src
 import { sendTestMsg } from '@/popup/utils/chromeHelper';
+import { log } from '@/core/util';
 export default defineComponent({
   name: 'Home',
   components: {
     HelloWorld,
   },
-  mounted() {
-    sendTestMsg();
+  methods: {
+    sendMsg() {
+      log('sent message');
+      sendTestMsg();
+    },
   },
 });
 </script>
