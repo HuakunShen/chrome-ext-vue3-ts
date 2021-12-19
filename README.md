@@ -7,5 +7,5 @@ npm install         # install dependencies
 npm run serve       # start development server
 npm run build       # make production build
 npm run build:ext   # build only extension files (content, background)
-npm run build:popup # build on ly popup frontend
+npm run build:ui # build on ly ui frontend
 ```

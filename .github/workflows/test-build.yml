@@ -8,12 +8,12 @@ on:
       - 'src/**'
 
 jobs:
-  test-popup-build:
+  test-ui-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build popup
-        run: make build-popup
+      - name: Build ui
+        run: make build-ui
 
   test-extension-build:
     runs-on: ubuntu-latest

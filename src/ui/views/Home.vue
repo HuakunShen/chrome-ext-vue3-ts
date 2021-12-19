@@ -7,8 +7,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from '@/popup/components/HelloWorld.vue'; // @ is an alias to /src
-import { sendTestMsg } from '@/popup/utils/chromeHelper';
+import HelloWorld from '@/ui/components/HelloWorld.vue'; // @ is an alias to /src
+import { sendTestMsg } from '@/ui/utils/chromeHelper';
 import { log } from '@/core/util';
 export default defineComponent({
   name: 'Home',

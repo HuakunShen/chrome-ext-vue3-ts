@@ -1,6 +1,6 @@
-build-popup:
+build-ui:
 	npm install
-	npm run build:popup
+	npm run build:ui
 
 build-ext:
 	npm install

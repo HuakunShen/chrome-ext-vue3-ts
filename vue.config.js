@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   publicPath: '',
-  outputDir: 'dist/popup',
+  outputDir: 'dist/ui',
   configureWebpack: {
     resolve: {
       alias: {

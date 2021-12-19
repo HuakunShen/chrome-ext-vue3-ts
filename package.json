@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve src/popup/main.ts",
+    "serve": "vue-cli-service serve src/ui/main.ts",
     "build:ext": "webpack --config webpack.prod.js",
-    "build:popup": "vue-cli-service build src/popup/main.ts",
-    "build": "npm run build:ext && npm run build:popup",
+    "build:ui": "vue-cli-service build src/ui/main.ts",
+    "build": "npm run build:ext && npm run build:ui",
     "lint": "vue-cli-service lint",
     "dev": "webpack --config webpack.dev.js",
     "test:unit": "vue-cli-service test:unit"
