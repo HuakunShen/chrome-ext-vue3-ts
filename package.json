@@ -6,9 +6,10 @@
     "serve:popup": "vue-cli-service serve src/ui/popup.ts",
     "serve": "npm run serve:popup",
     "serve:options": "vue-cli-service serve src/ui/options.ts",
+    "build:ext": "webpack --config webpack.prod.js",
     "build:options": "vue-cli-service build --dest dist/ui/options src/ui/options.ts",
     "build:popup": "vue-cli-service build --dest dist/ui/popup src/ui/popup.ts",
-    "build": "npm run build:options && npm run build:popup",
+    "build": "npm run build:ext && npm run build:options && npm run build:popup",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",
+    "@types/chrome": "^0.0.171",
     "@types/mocha": "^5.2.4",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
@@ -41,6 +43,8 @@
     "prettier": "^2.2.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
-    "typescript": "~4.1.5"
+    "typescript": "~4.1.5",
+    "webpack-cli": "^4.9.1",
+    "webpack-merge": "^5.8.0"
   }
 }
