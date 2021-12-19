@@ -1,4 +1,9 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import {
+  createRouter,
+  createWebHistory,
+  createWebHashHistory,
+  RouteRecordRaw,
+} from 'vue-router';
 import Home from '@/popup/views/Home.vue';
 
 const routes: Array<RouteRecordRaw> = [
@@ -19,7 +24,7 @@ const routes: Array<RouteRecordRaw> = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(), // update history setting to this, the previous one doesn't work in chrome extension popup
   routes,
 });
 

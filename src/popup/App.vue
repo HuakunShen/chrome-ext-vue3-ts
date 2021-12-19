@@ -1,16 +1,10 @@
 <template>
   <div id="nav">
-    <Home />
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+    <router-view />
   </div>
 </template>
-<script lang="ts">
-import Home from '@/popup/views/Home.vue';
-export default {
-  components: {
-    Home,
-  },
-};
-</script>
 <style lang="scss">
 #app {
   min-width: 50em;
