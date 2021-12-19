@@ -1,14 +1,11 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-    <router-view />
+    <h1>Options</h1>
   </div>
 </template>
+
 <style lang="scss">
 #app {
-  min-width: 50em;
-  min-height: 50em;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

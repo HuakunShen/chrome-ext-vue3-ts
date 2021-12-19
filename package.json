@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve src/ui/main.ts",
+    "serve:popup": "vue-cli-service serve src/ui/popup.ts",
+    "serve": "npm run serve:popup",
+    "serve:options": "vue-cli-service serve src/ui/options.ts",
     "build:ext": "webpack --config webpack.prod.js",
-    "build:ui": "vue-cli-service build src/ui/main.ts",
-    "build": "npm run build:ext && npm run build:ui",
-    "lint": "vue-cli-service lint",
-    "dev": "webpack --config webpack.dev.js",
-    "test:unit": "vue-cli-service test:unit"
+    "build:options": "vue-cli-service build --dest dist/ui/options src/ui/options.ts",
+    "build:popup": "vue-cli-service build --dest dist/ui/popup src/ui/popup.ts",
+    "build": "npm run build:ext && npm run build:options && npm run build:popup",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
