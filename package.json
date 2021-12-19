@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve:popup": "vue-cli-service serve src/ui/popup.ts",
+    "serve": "npm run serve:popup",
+    "serve:options": "vue-cli-service serve src/ui/options.ts",
+    "build:options": "vue-cli-service build --dest dist/ui/options src/ui/options.ts",
+    "build:popup": "vue-cli-service build --dest dist/ui/popup src/ui/popup.ts",
+    "build": "npm run build:options && npm run build:popup",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
