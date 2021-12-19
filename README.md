@@ -1,4 +1,4 @@
-# chrome-ext-vue3-ts
+# ttest
 
 ## Project setup
 ```
