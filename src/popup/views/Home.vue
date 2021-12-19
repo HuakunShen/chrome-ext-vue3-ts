@@ -6,13 +6,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-
+import { defineComponent } from 'vue';
+import HelloWorld from '@/popup/components/HelloWorld.vue'; // @ is an alias to /src
+import { sendTestMsg } from '@/popup/utils/chromeHelper';
 export default defineComponent({
-  name: "Home",
+  name: 'Home',
   components: {
     HelloWorld,
+  },
+  mounted() {
+    sendTestMsg();
   },
 });
 </script>
