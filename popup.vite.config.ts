@@ -19,7 +19,7 @@ export default defineConfig({
     outDir: 'dist/ui',
     rollupOptions: {
       input: {
-        popup: resolve(__dirname, 'popup.html'),
+        index: resolve(__dirname, 'popup.html'),
         options: resolve(__dirname, 'options.html')
       }
     }

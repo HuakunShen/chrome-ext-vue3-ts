@@ -1,5 +1,5 @@
 {
-  "name": "vue-project",
+  "name": "acorn-parser-vite",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "pinia": "^2.0.13",
-    "vue": "^3.2.33"
+    "vue": "^3.2.33",
+    "vue-router": "^4.0.14"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
