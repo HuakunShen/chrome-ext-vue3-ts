@@ -6,12 +6,13 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 
 const root = resolve(__dirname, 'src');
-const outDir = resolve(__dirname, 'dist/ui');
-
+const outDir = resolve(__dirname, 'dist');
+const publicDir = resolve(__dirname, 'public')
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: './',
+  // base: './',
+  publicDir,
   root,
   resolve: {
     alias: {
@@ -20,9 +21,10 @@ export default defineConfig({
   },
   build: {
     outDir,
+    emptyOutDir: true,
     rollupOptions: {
       input: {
-        popup: resolve(root, 'pages/popup/index.html'),
+        popup: resolve(root, 'index.html'),
         options: resolve(root, 'pages/options/index.html')
       }
     }

@@ -24,7 +24,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
 @import '@/assets/base.css';
 
 #app {
-  min-width: 20em;
+  min-width: 40em;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
